@@ -1,5 +1,15 @@
 import '@/styles/globals.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../styles/globals.css';
+import { Container } from 'react-bootstrap';
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+
+function MyApp({ Component, pageProps }) {
+  return (
+    <Container>
+      <Component {...pageProps} />
+    </Container>
+  );
 }
+
+export default MyApp;
