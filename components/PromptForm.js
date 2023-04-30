@@ -22,10 +22,9 @@ function PromptForm() {
             });
 
             const data = await response.json();
-            console.log(data);
-            const { output } = data;
+            console.log(data.output.message.content);
 
-            setApiOutput(`${output.text}`);
+            setApiOutput(`${data.output.message.content}`);
         }
         setValidated(true);
     };

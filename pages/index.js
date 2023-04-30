@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   return (
     <div className={styles.container}>
-      <h1>ITAL 241</h1>
+      <h1>Chat with Leonardo Davinci</h1>
       <PromptForm />
     </div>
   )

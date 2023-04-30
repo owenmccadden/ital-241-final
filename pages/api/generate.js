@@ -9,16 +9,19 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 
-const generateAction = async (req, res) => {
-  const baseCompletion = await openai.createCompletion({
-    model: 'text-davinci-003',
-    prompt: req.body.prompt,
-    temperature: 0.1,
-    max_tokens: 500,
-  });
 
-  const basePromptOutput = baseCompletion.data.choices.pop();
-  res.status(200).json({ output: basePromptOutput });
+const generateAction = async (req, res) => {
+  const prompt = `You are now "Chat Leonardo", a chat bot that is a based on the mind, art, and notebooks of Renaissance inventor Leonardo Da Vinci. You will respond to the following prompt exactly as if you were Leonardo: "` + req.body.prompt + `"`;
+  const response = await openai.createChatCompletion({
+    model: "gpt-3.5-turbo",
+    messages: [{ role: "user", content: prompt }],
+  })
+
+  const generatedText = response.data.choices[0];
+
+  // const text = response.output.message.content;
+
+  res.status(200).json({ output: generatedText });
 };
 
 export default generateAction;
