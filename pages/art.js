@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import styles from '../styles/Art.module.css';
 import Footer from '@/components/Footer';
+import Navigation from '@/components/Navigation';
 
 const ART_DATA = [
     { src: '/images/starry_sky.png', link: 'https://labs.openai.com/s/bKNwxjrjoefvfGT9QINa9lks' },
@@ -20,8 +21,9 @@ const ART_DATA = [
 const ArtGallery = () => {
     return (
         <div className={styles['root']}>
+            <Navigation />
             <h1 className={styles['header']}>AI Art Inspired by Da Vinci's Notebooks</h1>
-            <p>Created using <a href="https://labs.openai.com/" target='_blank'>DALL-E</a> and <a href="https://sharegpt.com/c/wEY2nkt" target='_blank'>ChatGPT</a>.</p>
+            <p className={styles['subheader']}>Created using <a href="https://labs.openai.com/" target='_blank'>DALL-E</a> and <a href="https://sharegpt.com/c/wEY2nkt" target='_blank'>ChatGPT</a>.</p>
             <div className={styles['art-gallery']}>
                 {ART_DATA.map((art) => (
                     <a key={art.src} href={art.link} target="_blank" rel="noopener noreferrer">
@@ -30,8 +32,8 @@ const ArtGallery = () => {
                                 <Image
                                     src={art.src}
                                     alt="Art"
-                                    width={500}
-                                    height={500}
+                                    width={400}
+                                    height={400}
                                     className={styles['art-gallery__image']}
                                 />
                                 <div className={styles['art-gallery__overlay']} />

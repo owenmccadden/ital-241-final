@@ -5,8 +5,9 @@ function Footer() {
     return (
         <footer className={styles['footer']}>
 
+            <h5>ITAL 241 – UNC Chapel Hill</h5>
             <p>
-                Made by <a href="https://owenmccadden.github.io/">Owen McCadden</a>
+                Created by Owen McCadden, Ben Woodman, Tyler Trexler, and Dair McNinch
             </p>
         </footer>
     );

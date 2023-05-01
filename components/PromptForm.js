@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { Container, Form, InputGroup, Button } from 'react-bootstrap';
 import styles from '@/styles/PromptForm.module.css';
+import RenaissanceLetter from './RenaissanceLetter';
 
 function PromptForm() {
     const [prompt, setPrompt] = useState('');
     const [validated, setValidated] = useState(false);
     const [apiOutput, setApiOutput] = useState('');
+    const [submitting, setSubmitting] = useState(false);
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -13,6 +15,7 @@ function PromptForm() {
         if (form.checkValidity() === false) {
             event.stopPropagation();
         } else {
+            setSubmitting(true);
             const response = await fetch('/api/generate', {
                 method: 'POST',
                 headers: {
@@ -23,7 +26,7 @@ function PromptForm() {
 
             const data = await response.json();
             console.log(data.output.message.content);
-
+            setSubmitting(false);
             setApiOutput(`${data.output.message.content}`);
         }
         setValidated(true);
@@ -35,7 +38,7 @@ function PromptForm() {
 
     return (
         <Container className="d-flex flex-column align-items-center justify-content-center vh-100 prompt-container">
-            <Form noValidate validated={validated} onSubmit={handleSubmit} className="w-50">
+            <Form noValidate validated={validated} onSubmit={handleSubmit} className="w-50 FormText">
                 <Form.Group>
                     <InputGroup>
                         <Form.Control
@@ -55,12 +58,14 @@ function PromptForm() {
                 </Form.Group>
             </Form>
             <div id="output">
-                {apiOutput && (
-                    <div className='output'>
-                        <div className='output-content'>
-                            {apiOutput}
+                {submitting ? ( // render loading animation if submitting is true
+                    <img src="/images/quill_pen.gif" alt="loading" className={styles.loadingAnimation} />
+                ) : (
+                    apiOutput && (
+                        <div className='output'>
+                            <RenaissanceLetter text={apiOutput} />
                         </div>
-                    </div>
+                    )
                 )}
             </div>
 

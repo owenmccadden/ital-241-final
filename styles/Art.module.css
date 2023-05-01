@@ -1,5 +1,10 @@
 .header {
   padding-top: 20px;
+  font-family: 'Lobster', cursive;
+}
+
+.subheader {
+  font-family: 'Lobster', cursive;
 }
 
 .art-gallery {
