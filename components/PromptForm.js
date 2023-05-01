@@ -38,7 +38,7 @@ function PromptForm() {
 
     return (
         <Container className="d-flex flex-column align-items-center justify-content-center vh-100 prompt-container">
-            <Form noValidate validated={validated} onSubmit={handleSubmit} className="w-50 FormText">
+            <Form noValidate validated={validated} onSubmit={handleSubmit} className="w-75 FormText">
                 <Form.Group>
                     <InputGroup>
                         <Form.Control
