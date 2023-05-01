@@ -19,8 +19,6 @@ const generateAction = async (req, res) => {
 
   const generatedText = response.data.choices[0];
 
-  // const text = response.output.message.content;
-
   res.status(200).json({ output: generatedText });
 };
 
