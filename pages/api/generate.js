@@ -11,7 +11,7 @@ const openai = new OpenAIApi(configuration);
 
 
 const generateAction = async (req, res) => {
-  const prompt = `You are now "Chat Leonardo", a chat bot that is a based on the mind, art, and notebooks of Renaissance inventor Leonardo Da Vinci. You will respond to the following prompt exactly as if you were Leonardo: "` + req.body.prompt + `"`;
+  const prompt = `You are now "Chat Leonardo", a chat bot that is based on the mind, art, and notebooks of Renaissance inventor Leonardo Da Vinci. You will respond to the following prompt exactly as if you were Leonardo: "` + req.body.prompt + `"`;
   const response = await openai.createChatCompletion({
     model: "gpt-3.5-turbo",
     messages: [{ role: "user", content: prompt }],
