@@ -7,9 +7,14 @@
 .mainHeader {
   font-family: 'Lobster', cursive;
   padding: 50px;
+  text-align: center;
 }
 
 .writingTitle {
   font-family: 'Lobster', cursive;
   text-align: center;
+}
+
+.leo-image {
+  margin: 0 auto 20px auto;
 }
