@@ -57,6 +57,7 @@ function PromptForm() {
                     </InputGroup>
                 </Form.Group>
             </Form>
+            <p>Powered by OpenAI's gpt-3.5-turbo model</p>
             <div id="output">
                 {submitting ? ( // render loading animation if submitting is true
                     <img src="/images/quill_pen.gif" alt="loading" className={styles.loadingAnimation} />
@@ -68,8 +69,6 @@ function PromptForm() {
                     )
                 )}
             </div>
-
-            <p>Powered by OpenAI's gpt-3.5-turbo model</p>
         </Container>
     );
 }
