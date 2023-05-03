@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from '../styles/FlipPage.module.css';
 
-function FlipPage(props) {
+function BackPage(props) {
     return (
         <a href={props.link}>
-             <div className={styles['arrow']}>
+             <div className={styles['arrowBack']}>
                 <span></span>
                 <span></span>
             </div>
@@ -14,4 +14,4 @@ function FlipPage(props) {
     )
 }
 
-export default FlipPage;
+export default BackPage;

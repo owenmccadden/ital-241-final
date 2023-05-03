@@ -37,7 +37,7 @@ function PromptForm() {
     };
 
     return (
-        <Container className="d-flex flex-column align-items-center justify-content-center vh-100 prompt-container">
+        <Container className="d-flex flex-column align-items-center justify-content-center vh-100 prompt-container RenaissanceLetter_renaissance-letter__GR0cr">
             <Form noValidate validated={validated} onSubmit={handleSubmit} className="w-75 FormText">
                 <Form.Group>
                     <InputGroup>
@@ -69,6 +69,7 @@ function PromptForm() {
                 )}
             </div>
 
+            <p>Powered by OpenAI's gpt-3.5-turbo model</p>
         </Container>
     );
 }
