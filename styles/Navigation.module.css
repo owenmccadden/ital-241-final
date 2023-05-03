@@ -1,6 +1,8 @@
 .navbar {
-    background-color: #f8f9fa;
+    background-color: #f5e5d1 !important;
     padding: 20px;
+    border: 1px solid #3c2415;
+    margin-top: 20px;
   }
 
   .nav-link {

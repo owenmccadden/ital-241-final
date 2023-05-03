@@ -1,8 +1,9 @@
 import { Navbar, Nav } from 'react-bootstrap';
+import styles from '../styles/Navigation.module.css';
 
 const Navigation = () => {
     return (
-        <Navbar bg="light" expand="lg">
+        <Navbar className={styles['navbar']} bg="light" expand="lg">
             <Navbar.Brand href="/">Home</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
