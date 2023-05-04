@@ -3,6 +3,7 @@ import Image from 'next/image';
 import styles from '../styles/Art.module.css';
 import Footer from '@/components/Footer';
 import Navigation from '@/components/Navigation';
+import BackPage from '@/components/BackPage';
 
 const ART_DATA = [
     { src: '/images/starry_sky.png', link: 'https://labs.openai.com/s/bKNwxjrjoefvfGT9QINa9lks' },
@@ -46,6 +47,7 @@ const ArtGallery = () => {
                     </a>
                 ))}
             </div>
+            <BackPage link='/chat'></BackPage>
             <Footer />
         </div>
     );
