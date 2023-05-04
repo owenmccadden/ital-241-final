@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Navigation />
-      <h1 className={styles.mainHeader}>Leonardo Da Vinci: Art and Technology</h1>
+      <h1 className={styles.mainHeader}>Leonardo Da Vinci: Evolution of Art and Technology</h1>
       <Image
         src={'/images/leonardo.png'}
         alt="Art"

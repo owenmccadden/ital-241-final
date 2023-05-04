@@ -13,7 +13,7 @@ export default function TechEvolution() {
   return (
     <div className={styles.container}>
       <Navigation />
-      <h1 className={styles.mainHeader}>Leonardo Da Vinci: Art and Technology</h1>
+      <h1 className={styles.mainHeader}>Leonardo Da Vinci: Evolution of Art and Technology</h1>
       <h3 className={styles.writingTitle}>Evolution of Technology</h3>
       <RenaissanceLetter text={<p>
         Leonardo believed that human dissection was necessary to obtain a true and perfect knowledge of the human body. He preferred the pig and monkey as animal systems because he believed terrestrial animals resembled each other by their variations in limb length and thickness. Leonardo used the information gained from dissection, not for medical reasons, but for artistic representation of the human body.  Today, technology has evolved, and X-rays are readily available at all medical facilities. X-rays are a form of electromagnetic radiation which can pass through the body and generate images of tissues and structures inside the body. Artistic renderings of the human form such as those penned by Leonardo were a precursor to this technology, but this advanced technology now eradicates the need for dissection for artistic representation.

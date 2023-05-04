@@ -11,7 +11,7 @@ const chat = () => {
     return (
         <div className={styles['container']}>
             <Navigation />
-            <h1 className={styles['header']}>AI Art Inspired by Da Vinci's Notebooks</h1>
+            <h1 className={styles.mainHeader}>Leonardo Da Vinci: Evolution of Art and Technology</h1>
             <h3 className={styles.writingTitle}>Chat with Leonardo Da Vinci</h3>
             <RenaissanceLetter text={<p>Da Vinci saw technology much in the same way that he saw art. Much like art, he saw technology as an extension of nature, an extension that can both better tell a story as well as benefit the general population. “If you, historians, or mathematicians, had not seen things with your eyes, you would have been able to write about them poorly” (Da Vinci 190). To Di Vinci, art and technology were one in the same, they were imitations of nature that can extend the human experience. 
                 <br></br> <br></br> Da Vinci saw technology much in the same way that he saw art. Much like art, he saw technology as an extension of nature, an extension that can both better tell a story as well as benefit the general population. “If you, historians, or mathematicians, had not seen things with your eyes, you would have been able to write about them poorly” (Da Vinci 190). To Di Vinci, art and technology were one in the same, they were imitations of nature that can extend the human experience. Leonardo says “The name of a man may differ from country to country, but a man’s form is never changed except by death” (Da Vinci 190). In short, while people differ across the world, a person is a person, and it matters not what their name or origin may be, but instead who they are and what they do on Earth. Most importantly, he claims “a beautiful object that is mortal passes away, but not so with art” (Da Vinci 189). In short, Da Vinci felt that while people are inherently mortal, and their bodies will eventually die, their works and contributions to the world will carry on. 
@@ -21,7 +21,7 @@ const chat = () => {
             <FlipPage link='/art'></FlipPage>
             <BackPage link='/techEvolution'></BackPage>
             <PromptForm />
-            <RenaissanceLetter text={<p><b>Citation</b><br></br><br></br>Di Vinci, Leonardo. “Section 1179.” Selections from the Notebooks.</p>} />
+            <RenaissanceLetter text={<p><b>Citation</b><br></br><br></br>Di Vinci, Leonardo. Selections from the Notebooks., p. 185-195</p>} />
             <Footer />
 
         </div>
